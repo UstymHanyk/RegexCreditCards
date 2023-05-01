@@ -21,4 +21,17 @@ public class CreditCardExtractor {
 
         return creditCardNumbers;
     }
+
+    public static void main(String[] args) {
+        if (args.length == 0) {
+            System.out.println("Please enter text: ");
+            return;
+        }
+        String userInput = args[0];
+        CreditCardExtractor extractor = new CreditCardExtractor();
+        List<String> cardList = extractor.extractCreditCardNumbers(userInput);
+        System.out.println(cardList);
+
+    }
+
 }
